@@ -1,0 +1,284 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#products{
+    margin-bottom: 20px;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: beige;
+    font-family: monospace;
+}
+
+h1 {
+    font-size: 50px;
+    padding-left: 20px;
+    text-decoration: line-through;
+}
+
+hr {
+    border: 2px solid black;
+    margin: 0 20px;
+}
+
+
+/* Header and Navbar */
+#header {
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    height: 70px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.logo {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    margin-right: auto; 
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+nav > ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+li a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10% 5%;
+}
+
+.hero-text h1 {
+    font-size: 80px;
+    text-decoration: none;
+}
+
+.sub-text {
+    font-size: 20px;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 90%;
+}
+
+.content img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.img-description {
+    text-align: center;
+    padding: 20px;
+    width: 50%;
+}
+
+.img-description h1 {
+    font-size: 35px;
+    text-decoration: none;
+}
+
+.img-description p {
+    font-size: 20px;
+}
+/*Suggestions*/
+.suggestions {
+    width: 50%;
+    background-color: #373B41;
+    margin: 0px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Container */
+.suggestions .userinfo {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* Label Styling */
+.userinfo label {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #FDF1DD;
+}
+
+
+/* Input and Textarea Styling */
+.userinfo input, 
+.userinfo textarea {
+    width: 100%;  
+    max-width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: border 0.3s ease-in-out;
+    margin: 0 auto;  
+}
+
+/* Input and Textarea Focus Effect */
+.userinfo input:focus,
+.userinfo textarea:focus {
+    border-color: #FCB5B7;
+    outline: none;
+}
+
+/* Textarea Specific Styles */
+#suggestions {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Submit Button Styling */
+button {
+    width: 100%;
+    max-width: 20rem;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin: 0 auto; 
+}
+
+button:hover {
+    background-color: #D2CDBE;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: auto;
+        padding: 10px;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    nav > ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 60px;
+    }
+
+    .sub-text {
+        font-size: 18px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .img-description {
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .sub-text {
+        font-size: 16px;
+    }
+
+    li a {
+        font-size: 1rem;
+    }
+
+    .img-description h1 {
+        font-size: 24px; 
+    }
+
+    .img-description p {
+        font-size: 16px; 
+    }
+
+    .suggestions {
+        width: 90%;  
+        padding: 15px;  
+    }
+
+    .userinfo label {
+        font-size: 14px;  
+    }
+
+    .userinfo input,
+    .userinfo textarea {
+        font-size: 16px;  
+        padding: 12px; 
+    }
+
+    button {
+        font-size: 18px;  
+    }
+}
